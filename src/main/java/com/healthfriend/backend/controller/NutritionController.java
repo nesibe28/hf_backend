@@ -12,7 +12,6 @@ public class NutritionController {
     @Autowired
     private NutritionRepository nutritionRepository;
 
-
     @GetMapping(path = "/all")
     public @ResponseBody Iterable<Nutrition> getAllNutrition() {
         return nutritionRepository.findAll();

@@ -1,7 +1,7 @@
 package com.healthfriend.backend.repository;
 
 import com.healthfriend.backend.entity.Water;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface WaterRepository extends JpaRepository<Water, Integer> {
+public interface WaterRepository extends CrudRepository<Water, Integer> {
 }
