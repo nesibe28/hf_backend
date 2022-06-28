@@ -12,4 +12,20 @@ public class Water {
     private Long id;
 
     private int glasses;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getGlasses() {
+        return glasses;
+    }
+
+    public void setGlasses(int glasses) {
+        this.glasses = glasses;
+    }
 }

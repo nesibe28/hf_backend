@@ -14,29 +14,29 @@ public class NutritionController {
 
 
     @GetMapping(path = "/all")
-    public @ResponseBody Iterable<Nutrition> getAllCustomer() {
+    public @ResponseBody Iterable<Nutrition> getAllNutrition() {
         return nutritionRepository.findAll();
     }
 
     @GetMapping(path = "/{id}")
-    public @ResponseBody Nutrition getCustomerById(@PathVariable("id") int id) {
+    public @ResponseBody Nutrition getNutritionById(@PathVariable("id") int id) {
         return nutritionRepository.findById(id).get();
     }
 
     @PutMapping(path = "/update")
-    public @ResponseBody String updateCustomer(@RequestBody Nutrition input) {
+    public @ResponseBody String updateNutrition(@RequestBody Nutrition input) {
         nutritionRepository.save(input);
         return "Saved";
     }
 
     @PostMapping(path = "/add")
-    public @ResponseBody Long addNewCustomer(@RequestBody Nutrition input) {
+    public @ResponseBody Long addNewNutrition(@RequestBody Nutrition input) {
         Nutrition result = nutritionRepository.save(input);
         return result.getId();
     }
 
     @DeleteMapping(path = "/delete/{id}")
-    public @ResponseBody String deleteCustomer(@PathVariable("id") int id) {
+    public @ResponseBody String deleteNutrition(@PathVariable("id") int id) {
         nutritionRepository.deleteById(id);
         return "Deleted";
     }
