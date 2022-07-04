@@ -32,10 +32,6 @@ public class WaterController {
     public Water save(@RequestBody Water water){
         return waterRepository.save(water);
     }
-    /**public @ResponseBody Long addNewWater(@RequestBody Water input) {
-     Water result = waterRepository.save(input);
-     return result.getId();
-     }*/
 
 
 }

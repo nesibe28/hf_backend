@@ -1,13 +1,8 @@
 package com.healthfriend.backend.entity;
 
-import com.healthfriend.backend.dto.Meal;
-import com.healthfriend.backend.dto.Medicine;
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
@@ -17,11 +12,17 @@ public class Nutrition {
     @GeneratedValue(strategy=GenerationType.AUTO)
     private Long id;
 
-    @Type(type="json")
-    private List<Meal> meals;
+    private boolean mealEatenMorning;
 
-    @Type(type="json")
-    private List<Medicine> medicines;
+    private boolean mealEatenAfternoon;
+
+    private boolean mealEatenEvening;
+
+    private boolean medicineTakenMorning;
+
+    private boolean medicineTakenAfternoon;
+
+    private boolean medicineTakenEvening;
 
     public Long getId() {
         return id;
@@ -31,19 +32,51 @@ public class Nutrition {
         this.id = id;
     }
 
-    public List<Meal> getMeals() {
-        return meals;
+    public boolean isMealEatenMorning() {
+        return mealEatenMorning;
     }
 
-    public void setMeals(List<Meal> meals) {
-        this.meals = meals;
+    public void setMealEatenMorning(boolean mealEatenMorning) {
+        this.mealEatenMorning = mealEatenMorning;
     }
 
-    public List<Medicine> getMedicines() {
-        return medicines;
+    public boolean isMealEatenAfternoon() {
+        return mealEatenAfternoon;
     }
 
-    public void setMedicines(List<Medicine> medicines) {
-        this.medicines = medicines;
+    public void setMealEatenAfternoon(boolean mealEatenAfternoon) {
+        this.mealEatenAfternoon = mealEatenAfternoon;
+    }
+
+    public boolean isMealEatenEvening() {
+        return mealEatenEvening;
+    }
+
+    public void setMealEatenEvening(boolean mealEatenEvening) {
+        this.mealEatenEvening = mealEatenEvening;
+    }
+
+    public boolean isMedicineTakenMorning() {
+        return medicineTakenMorning;
+    }
+
+    public void setMedicineTakenMorning(boolean medicineTakenMorning) {
+        this.medicineTakenMorning = medicineTakenMorning;
+    }
+
+    public boolean isMedicineTakenAfternoon() {
+        return medicineTakenAfternoon;
+    }
+
+    public void setMedicineTakenAfternoon(boolean medicineTakenAfternoon) {
+        this.medicineTakenAfternoon = medicineTakenAfternoon;
+    }
+
+    public boolean isMedicineTakenEvening() {
+        return medicineTakenEvening;
+    }
+
+    public void setMedicineTakenEvening(boolean medicineTakenEvening) {
+        this.medicineTakenEvening = medicineTakenEvening;
     }
 }
