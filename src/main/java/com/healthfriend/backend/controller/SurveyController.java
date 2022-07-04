@@ -31,9 +31,9 @@ public class SurveyController {
     }
 
     @PostMapping(path = "/add")
-    public @ResponseBody Long addNewNutrition(@RequestBody Survey input) {
-        Survey result = surveyRepository.save(input);
-        return result.getId();
+    public @ResponseBody String addNewNutrition(@RequestBody Survey input) {
+        surveyRepository.save(input);
+        return "Saved";
     }
 
     @DeleteMapping(path = "/delete/{id}")

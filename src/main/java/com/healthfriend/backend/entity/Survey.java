@@ -13,7 +13,7 @@ public class Survey {
 
     private String name;
 
-    private String Sickness;
+    private String sickness;
 
     private int glassesOfWater;
 
@@ -41,11 +41,11 @@ public class Survey {
     }
 
     public String getSickness() {
-        return Sickness;
+        return sickness;
     }
 
     public void setSickness(String sickness) {
-        Sickness = sickness;
+        this.sickness = sickness;
     }
 
     public Long getId() {
@@ -54,5 +54,69 @@ public class Survey {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public int getGlassesOfWater() {
+        return glassesOfWater;
+    }
+
+    public void setGlassesOfWater(int glassesOfWater) {
+        this.glassesOfWater = glassesOfWater;
+    }
+
+    public int getMealsPerDay() {
+        return mealsPerDay;
+    }
+
+    public void setMealsPerDay(int mealsPerDay) {
+        this.mealsPerDay = mealsPerDay;
+    }
+
+    public String getActivityInMorning() {
+        return activityInMorning;
+    }
+
+    public void setActivityInMorning(String activityInMorning) {
+        this.activityInMorning = activityInMorning;
+    }
+
+    public String getMedicineInMorning() {
+        return medicineInMorning;
+    }
+
+    public void setMedicineInMorning(String medicineInMorning) {
+        this.medicineInMorning = medicineInMorning;
+    }
+
+    public String getActivityInAfternoon() {
+        return activityInAfternoon;
+    }
+
+    public void setActivityInAfternoon(String activityInAfternoon) {
+        this.activityInAfternoon = activityInAfternoon;
+    }
+
+    public String getMedicineInAfternoon() {
+        return medicineInAfternoon;
+    }
+
+    public void setMedicineInAfternoon(String medicineInAfternoon) {
+        this.medicineInAfternoon = medicineInAfternoon;
+    }
+
+    public String getActivityInEvening() {
+        return activityInEvening;
+    }
+
+    public void setActivityInEvening(String activityInEvening) {
+        this.activityInEvening = activityInEvening;
+    }
+
+    public String getMedicineInEvening() {
+        return medicineInEvening;
+    }
+
+    public void setMedicineInEvening(String medicineInEvening) {
+        this.medicineInEvening = medicineInEvening;
     }
 }
