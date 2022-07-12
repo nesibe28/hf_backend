@@ -16,8 +16,7 @@ public class CorsConfiguration {
         config.setAllowCredentials(true);
         // Don't do this in production, use a proper list  of allowed origins
         ArrayList<String> origins = new ArrayList<>();
-        origins.add("http://localhost:8080");
-        origins.add("http://localhost:8081");
+        origins.add("http://localhost:8085");
         config.setAllowedOrigins(origins);
         config.setAllowedHeaders(Arrays.asList("Origin", "Content-Type", "Accept"));
         config.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "OPTIONS", "DELETE", "PATCH"));
